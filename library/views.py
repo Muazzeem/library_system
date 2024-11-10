@@ -37,8 +37,12 @@ class BookViewSet(viewsets.ModelViewSet):
             queryset = queryset.filter(publication_date__range=[publication_after, publication_before])
         return queryset
 
-    def list(self, request, *args, **kwargs):
-        cache_key = "books_list"
-        cached_books = cache.get(cache_key)
-        if cached_books is not None:
-            return Response(cached_books)
+    # def list(self, request, *args, **kwargs):
+    #     cache_key = "books_list"
+    #     cached_books = cache.get(cache_key)
+    #     if cached_books is not None:
+    #         return Response(cached_books)
+    #     else:
+    #         books = self.get_queryset()
+    #         cache.set(cache_key, books)
+    #         return Response(books)
