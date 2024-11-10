@@ -30,4 +30,16 @@ pip install -r requirements.txt
 ```
 It will install Django, Django REST Framework, and other required packages.
 
+4. Run migrations:
 
+```bash
+python manage.py migrate
+```
+
+5.Run the server:
+
+```bash
+python manage.py runserver
+```
+
+6. Open your browser and navigate to `http://localhost:8000/api/` to access the API documentation.
